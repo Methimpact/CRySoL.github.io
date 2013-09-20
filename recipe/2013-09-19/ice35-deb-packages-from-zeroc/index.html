@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Installing Ice-3.5 packages from ZeroC on Debian</title>
+    <title>Installing the Ice-3.5 packages from ZeroC on Debian</title>
     
     <meta name="author" content="CRySoL">
 
@@ -2409,12 +2409,6 @@
     
   
     
-      
-    
-  
-    
-      
-    
   
     
       
@@ -2428,6 +2422,20 @@
       
     
   
+    
+      
+      	
+      	<li><a href="/about.html">About</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
     
   
     
@@ -2445,20 +2453,8 @@
     
   
     
-      
-    
   
     
-  
-    
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/about.html">About</a></li>
-      	
       
     
   
@@ -2467,6 +2463,10 @@
       	
       	<li><a href="/users.html">Users</a></li>
       	
+      
+    
+  
+    
       
     
   
@@ -2774,6 +2774,10 @@
     
       <a href="/tags.html#devel-ref">devel</a>
     
+      <a href="/tags.html#Ice-ref">Ice</a>
+    
+      <a href="/tags.html#Debian-ref">Debian</a>
+    
     </li>
   
   </ul>
@@ -2785,6 +2789,20 @@
 
   
      
+     
+  
+     
+     
+     <a class="tag-icon" href="/tags.html#Ice-ref">
+        <img src="http://crysol.org/files/category_pictures/zeroc_logo.png" title="Ice" alt="Ice-icon"/>
+     </a>
+     
+  
+     
+     
+     <a class="tag-icon" href="/tags.html#Debian-ref">
+        <img src="http://crysol.org/files/category_pictures/debian.png" title="Debian" alt="Debian-icon"/>
+     </a>
      
   
 
@@ -2805,15 +2823,15 @@
   <h2>related</h2>
   <ul>
     
-    <li><a href="/recipe/2013-09-03/DSO">Undertanding the DSO Link Change</a></li>
+    <li><a href="/recipe/2005-09-13/ssh-y-scp-para-acceder-a-equipos-remotos-sin-escribir-la-clave-public-key-authentication">SSH y SCP para acceder a equipos remotos sin escribir la clave (public key authentication)</a></li>
     
-    <li><a href="/recipe/2013-08-11/hp-p1005-debian">HP LaserJet P1005 with Debian and the free driver</a></li>
+    <li><a href="/2005-09-24/acabo-de-registrarme-en-el-portal">Acabo de registrarme en el Portal</a></li>
     
-    <li><a href="/recipe/2013-07-10/get-shell-user-without-shell">How to get a shell for a non-shell user</a></li>
+    <li><a href="/2005-09-26/buenas-a-tods">Buenas a tod@s!</a></li>
     
-    <li><a href="/recipe/2013-07-09/puppet-install-latest-package">Ensuring last version of a package with puppet</a></li>
+    <li><a href="/tale/2005-09-26/instalacin-local-de-mambo-joomla-bajo-gnu-linux">Instalación local de Mambo / Joomla bajo GNU/Linux</a></li>
     
-    <li><a href="/recipe/2013-07-05/gnome-shell-fails">Fallo de gnome-shell en debian sid</a></li>
+    <li><a href="/recipe/2005-09-27/acceso-a-red-cmpus-con-firefox-y-greasemonkey">Acceso a Red C@mpus con Firefox y Greasemonkey</a></li>
     
   </ul>
 </div>
@@ -2822,7 +2840,7 @@
   <h2>recent</h2>
   <ul>
   
-    <li><a href="/recipe/2013-09-19/ice35-deb-packages-from-zeroc">Installing Ice-3.5 packages from ZeroC on Debian</a></li>
+    <li><a href="/recipe/2013-09-19/ice35-deb-packages-from-zeroc">Installing the Ice-3.5 packages from ZeroC on Debian</a></li>
   
     <li><a href="/recipe/2013-09-03/DSO">Undertanding the DSO Link Change</a></li>
   
@@ -2839,25 +2857,32 @@
 
 <div class="node span9">
   <div class="page-header">
-    <h1>Installing Ice-3.5 packages from ZeroC on Debian </h1>
+    <h1>Installing the Ice-3.5 packages from ZeroC on Debian </h1>
   </div>
 
   <div class="row-fluid post-full">
     <div class="span12">
       <div class="content">
-	<p><!--break--></p>
-<p>Java</p>
-<p>sudo su<br />
-echo &#8220;deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main&#8221; &gt; /etc/apt/sources.list.d/webudp8-java-list<br />
-apt-key adv &#8212;keyserver keyserver.ubuntu.com &#8212;recv-keys EEA14886<br />
-apt-get update<br />
-apt-get install oracle-java7-installer<br />
-apt-get install oracle-java7-set-default</p>
-<p>Ice</p>
-<p>wget http://www.zeroc.com/download/Ice/3.5/ubuntu/ice3.5-raring.list <del>O</del> &gt; /etc/apt/sources.list.d/ice3.5-raring.list<br />
-wget http://www.zeroc.com/download/<span class="caps">RPM</span>-<span class="caps">GPG</span>-<span class="caps">KEY</span>-zeroc-release <del>O</del> | apt-key add -<br />
-apt-get update<br />
-apt-get install ice ice-dev</p>
+	<p>ZeroC provides their own Ubuntu/Debian packages for the <a href="http://www.zeroc.com/download.html">version 3.5</a>. This recipe includes all steps for a successful installation.</p>
+<p><!--break--></p>
+<p>Some new features (like the icegrid-gui metric graphics) requires JavaFX, that is only available in the Oracle Java <span class="caps">SDK</span>.</p>
+<p>To install it, execute:</p>
+<pre class="console">
+$ sudo su
+# echo “deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main” &gt; /etc/apt/sources.list.d/webudp8-java-list
+# apt-key adv —keyserver keyserver.ubuntu.com —recv-keys EEA14886
+# apt-get update
+# apt-get install oracle-java7-installer
+# apt-get install oracle-java7-set-default
+</pre>
+<p>To install Ice packages, execute:</p>
+<pre class="console">
+$ sudo su
+# wget http://www.zeroc.com/download/Ice/3.5/ubuntu/ice3.5-raring.list O &gt; /etc/apt/sources.list.d/ice3.5-raring.list
+# wget http://www.zeroc.com/download/RPM-GPG-KEY-zeroc-release O | apt-key add -
+# apt-get update
+# apt-get install ice ice-dev
+</pre>
       </div>
 
       
@@ -2922,7 +2947,7 @@ apt-get install ice ice-dev</p>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
 	  See <a href="https://github.com/CRySoL/CRySoL.github.io" target="_blank">site sources</a>.
 	  <br/>
-	  Generated at 2013-09-19 20:40:55 +0200
+	  Generated at Fri Sep 20 16:34:47 +0200 2013
 	</p>
       </footer>
 
