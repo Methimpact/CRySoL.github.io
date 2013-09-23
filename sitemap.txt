@@ -1306,6 +1306,7 @@ http://CRySoL.github.io/page115/index.html
 http://CRySoL.github.io/page116/index.html
 http://CRySoL.github.io/page117/index.html
 
+http://CRySoL.github.io/recipe/2013-09-23/virtualbox-vmdk-to-vdi
 http://CRySoL.github.io/recipe/2013-09-19/ice35-deb-packages-from-zeroc
 http://CRySoL.github.io/recipe/2013-09-03/DSO
 http://CRySoL.github.io/recipe/2013-08-11/hp-p1005-debian
