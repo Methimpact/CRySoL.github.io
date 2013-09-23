@@ -349,6 +349,7 @@ http://CRySoL.github.io/p/node/180/index.html
 http://CRySoL.github.io/p/node/795/index.html
 http://CRySoL.github.io/p/node/32/index.html
 http://CRySoL.github.io/p/node/1018/index.html
+http://CRySoL.github.io/p/node/1706/index.html
 http://CRySoL.github.io/p/node/1138/index.html
 http://CRySoL.github.io/p/node/493/index.html
 http://CRySoL.github.io/p/node/1006/index.html
@@ -812,6 +813,7 @@ http://CRySoL.github.io/p/node/1390/index.html
 http://CRySoL.github.io/p/node/377/index.html
 http://CRySoL.github.io/p/node/1070/index.html
 http://CRySoL.github.io/p/node/1435/index.html
+http://CRySoL.github.io/p/node/1707/index.html
 http://CRySoL.github.io/p/node/531/index.html
 http://CRySoL.github.io/p/node/1004/index.html
 http://CRySoL.github.io/p/node/1017/index.html
@@ -1313,7 +1315,9 @@ http://CRySoL.github.io/recipe/2013-08-11/hp-p1005-debian
 http://CRySoL.github.io/recipe/2013-07-10/get-shell-user-without-shell
 http://CRySoL.github.io/recipe/2013-07-09/puppet-install-latest-package
 http://CRySoL.github.io/recipe/2013-07-05/gnome-shell-fails
+http://CRySoL.github.io/cooking/2013-07-02/pastel-de-chocolate
 http://CRySoL.github.io/cooking/2013-06-30/pancakes
+http://CRySoL.github.io/cooking/2013-06-26/pollo-a-la-pia-con-queso
 http://CRySoL.github.io/2013-06-25/git-dir
 http://CRySoL.github.io/recipe/2013-06-20/configure-wireless-rtl8723ae
 http://CRySoL.github.io/2013-06-14/prueba-listados
@@ -1338,6 +1342,7 @@ http://CRySoL.github.io/recipe/2012-10-26/asyncronous-spy-assertions-with-python
 http://CRySoL.github.io/2012-10-03/distribuyendo-programas-python-en-el-pypi-python-package-index
 http://CRySoL.github.io/recipe/2012-09-05/ghdl-vhpidirect-o-como-crear-compilar-y-ejecutar-un-programa-vhdl-con-llamadas-a-cdigo-c
 http://CRySoL.github.io/recipe/2012-05-23/configurar-las-impresoras-de-la-esi-en-tu-debian-gnu-linux
+http://CRySoL.github.io/recipe/2012-04-16/gnu-emacs-pestaas-realmente-tiles-cambiando-con-m-num
 http://CRySoL.github.io/recipe/2012-04-16/gnu-emacs-pestaas-realmente-tiles-cambiando-con-alt-num
 http://CRySoL.github.io/2012-04-08/consulta-sobre-los-raspberry
 http://CRySoL.github.io/recipe/2012-03-29/separacin-silbica-en-libreoffice

@@ -2411,6 +2411,10 @@
     
   
     
+  
+    
+  
+    
       
     
   
@@ -2859,7 +2863,8 @@
   <div class="row-fluid post-full">
     <div class="span12">
       <div class="content">
-	<p>Something like this should be enough. You must known the name of the virtual disk controller (&#8220;<span class="caps">SATA</span>&#8221; in the example):</p>
+	<p>When you have a functional virtual machine but you want to have the virtual disk in a different format.</p>
+<p>Something like this should be enough. You must known the name of the virtual disk controller (&#8220;<span class="caps">SATA</span>&#8221; in the example):</p>
 <pre class="console">
 $ VBoxManage storageattach NAME --storagectl SATA --port 0 --device 0 --type hdd --medium none
 $ VBoxManage clonehd --format vdi OLD_DISK.vmdk NEW_DISK.vdi
@@ -2929,7 +2934,7 @@ $ VBoxManage storageattach NAME --storagectl SATA --port 0 --device 0 --type hdd
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
 	  See <a href="https://github.com/CRySoL/CRySoL.github.io" target="_blank">site sources</a>.
 	  <br/>
-	  Generated at Mon Sep 23 20:36:30 +0200 2013
+	  Generated at Mon Sep 23 22:36:44 +0200 2013
 	</p>
       </footer>
 
