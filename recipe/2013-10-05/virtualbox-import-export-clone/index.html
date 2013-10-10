@@ -2852,15 +2852,15 @@
 	<p>VirtualBox supports the <span class="caps">OVF</span> (Open Virtualization Format) and the <span class="caps">OVA</span> package (an single archive format).</p>
 <p><!--break--></p>
 <h2>Import</h2>
-<p>You can import a .ova archive through File &#8594; Import Applicance (C-i). The wizard allows to discard attached peripherals and &#8220;reinitialize the <span class="caps">MAC</span> address of all networks cards&#8221;. This latter option is important in the case you are importing in the same VirtualBox the .ova comes.</p>
-<p>The same can be achieved with command line with:</p>
+<p>You can import an .ova archive through File &#8594; Import Applicance (C-i). The wizard allows to discard attached peripherals and &#8220;reinitialize the <span class="caps">MAC</span> address of all networks cards&#8221;. This latter option is important in the case you are importing to the same VirtualBox the .ova comes.</p>
+<p>The same can be achieved from command line with:</p>
 <pre class="console">
 $ vboxmanage import &lt;file&gt;.ova
 </pre>
 <p>This does not require to previously start the <code>virtualbox</code> application.</p>
 <h2>Export</h2>
 <p>Click File &#8594; Export Appliance (C-e) and choose the machine you want. If you click the &#8220;Hide Description&#8221; button then several metadata may be edited and set destination path.</p>
-<p>And the same can be done with command line:</p>
+<p>And the same can be done from command line:</p>
 <pre class="console">
 $ vboxmanage export &lt;machine-name&gt; -o &lt;file&gt;.ova
 </pre>
@@ -2941,7 +2941,7 @@ $ vboxmanage clonevm &lt;source-machine-name&gt; --name &lt;target-machine-name&
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
 	  See <a href="https://github.com/CRySoL/CRySoL.github.io" target="_blank">site sources</a>.
 	  <br/>
-	  Generated at Thu Oct 10 02:38:04 +0200 2013
+	  Generated at Thu Oct 10 02:53:22 +0200 2013
 	</p>
       </footer>
 
