@@ -1307,7 +1307,9 @@ http://CRySoL.github.io/page114/index.html
 http://CRySoL.github.io/page115/index.html
 http://CRySoL.github.io/page116/index.html
 http://CRySoL.github.io/page117/index.html
+http://CRySoL.github.io/page118/index.html
 
+http://CRySoL.github.io/recipe/2013-10-21/git-remove-from-history
 http://CRySoL.github.io/recipe/2013-10-15/virtualbox-compact-vmdk-images
 http://CRySoL.github.io/recipe/2013-10-12/apt-pinning
 http://CRySoL.github.io/recipe/2013-10-10/change-primary-monitor
