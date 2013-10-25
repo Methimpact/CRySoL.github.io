@@ -1326,7 +1326,7 @@ http://CRySoL.github.io/cooking/2013-06-30/pancakes
 http://CRySoL.github.io/cooking/2013-06-26/pollo-a-la-pia-con-queso
 http://CRySoL.github.io/2013-06-25/git-dir
 http://CRySoL.github.io/recipe/2013-06-20/configure-wireless-rtl8723ae
-http://CRySoL.github.io/2013-06-14/prueba-listados
+http://CRySoL.github.io/recipe/2013-06-14/prueba-listados
 http://CRySoL.github.io/recipe/2013-06-07/testing-deterministic-behavior-with-doublex
 http://CRySoL.github.io/recipe/2013-06-06/reduce-pdf
 http://CRySoL.github.io/recipe/2013-06-01/drupal-node-terms
