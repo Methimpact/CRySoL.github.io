@@ -1309,6 +1309,7 @@ http://CRySoL.github.io/page116/index.html
 http://CRySoL.github.io/page117/index.html
 http://CRySoL.github.io/page118/index.html
 
+http://CRySoL.github.io/recipe/2013-10-28/file-grain-sudo
 http://CRySoL.github.io/recipe/2013-10-21/git-remove-from-history
 http://CRySoL.github.io/recipe/2013-10-15/virtualbox-compact-vmdk-images
 http://CRySoL.github.io/recipe/2013-10-12/apt-pinning
