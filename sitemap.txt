@@ -1309,6 +1309,7 @@ http://CRySoL.github.io/page116/index.html
 http://CRySoL.github.io/page117/index.html
 http://CRySoL.github.io/page118/index.html
 
+http://CRySoL.github.io/recipe/2013-12-04/authentication-in-IceGrid
 http://CRySoL.github.io/recipe/2013-11-29/fix-damaged-var-lib-dpkg-available
 http://CRySoL.github.io/recipe/2013-11-15/reading-a-property-file-with-augeas
 http://CRySoL.github.io/recipe/2013-10-28/file-grain-sudo
