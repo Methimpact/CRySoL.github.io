@@ -2941,6 +2941,8 @@
 <p>Here I want to read a simple properties file (compound by key=value lines) without define a specific &#8220;lens&#8221;. In particular, it is an Ice configuration file.</p>
 <p>I need to write an augeas script (called <code>ice-locator.augeas</code>) like this:</p>
 <pre>
+#!/usr/bin/augtool -f
+
 set /augeas/load/IniFile/lens simplevars.lns
 set /augeas/load/IniFile/incl /etc/icegridnode.conf
 load
@@ -2949,8 +2951,6 @@ quit
 </pre>
 <p>I using the a lens called &#8220;IniFile&#8221; and say to augeas that is good to read the file <code>/etc/icegridnode.conf</code>. That file looks like this:</p>
 <pre>
-#!/usr/bin/augtool -f
-
 Ice.Default.Locator=IceGrid/Locator -t:tcp -h master.example.net -p 4061
 IceGrid.Node.Name=node1
 IceGrid.Node.Data=/var/lib/ice/icegrid/node1
@@ -3029,12 +3029,12 @@ $ ./ice-locator.augeas
       <hr/>
 
       <footer>
-        <p>&copy; 2013 CRySoL
+        <p>&copy; 2014 CRySoL
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
 	  See <a href="https://github.com/CRySoL/web.source" target="_blank">site sources</a>.
 	  <br/>
-	  Generated at Wed Dec 04 21:06:01 +0100 2013
+	  Generated at Sun Jan 05 13:16:29 +0100 2014
 	</p>
       </footer>
 
