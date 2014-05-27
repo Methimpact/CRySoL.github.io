@@ -2460,6 +2460,7 @@ http://CRySoL.github.io/page116/index.html
 http://CRySoL.github.io/page117/index.html
 http://CRySoL.github.io/page118/index.html
 
+http://CRySoL.github.io/recipe/2014-05-27/vagrant-multi-machine
 http://CRySoL.github.io/recipe/2014-05-20/veewee-on-debian
 http://CRySoL.github.io/recipe/2014-05-19/latex-packages
 http://CRySoL.github.io/recipe/2014-01-22/run-until-fails
