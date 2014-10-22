@@ -5010,6 +5010,8 @@
   
     
   
+    
+  
 
 
 
@@ -5036,6 +5038,8 @@
 <h2>recent</h2>
 <ul>
 
+  <li><a href="/recipe/2014-10-08/introduction-to-ogre3d">Introduccion a Ogre3D</a></li>
+
   <li><a href="/recipe/2014-09-28/nautilus-sort-directories-first">nautilus: list folder before files</a></li>
 
   <li><a href="/recipe/2014-05-27/vagrant-multi-machine">multi machine Vagrantfile</a></li>
@@ -5043,8 +5047,6 @@
   <li><a href="/recipe/2014-05-20/veewee-on-debian">Installing veewee on Debian sid</a></li>
 
   <li><a href="/recipe/2014-05-19/latex-packages">Useful LaTeX packages and their main commands</a></li>
-
-  <li><a href="/recipe/2014-01-22/run-until-fails">Keep repeating a command until it fails</a></li>
 
 </ul>
 </div>
@@ -5056,7 +5058,7 @@
 <tr class="row1">
 <td class="col1">
   <a href="javascript:window.location.href='/categories.html#recipe-ref'; hide_others()"
-     title="597 posts"
+     title="598 posts"
      >recipe</a>
 </td><td class="col2">
   <a href="javascript:window.location.href='/categories.html#tale-ref'; hide_others()"
@@ -5388,6 +5390,10 @@
   <a href="javascript:window.location.href='/tags.html#nautilus-ref'; hide_others()"
      title="1 posts"
      >nautilus</a>
+</td><td class="col2">
+  <a href="javascript:window.location.href='/tags.html#Ogre3D-ref'; hide_others()"
+     title="1 posts"
+     >Ogre3D</a>
 </td></tr>
 
 </table>
@@ -5409,13 +5415,13 @@
     </li>
   
 
-  <li><a>Page: 66 of 118</a></li>
+  <li><a>Page: 66 of 119</a></li>
 
   
     <li class="next" title="next page">
       <a href="/page67">&rsaquo;</a>
     </li>
-    <li class="next"><a href="/page118" title="last page">&raquo;</a></li>
+    <li class="next"><a href="/page119" title="last page">&raquo;</a></li>
   
 
   </ul>
@@ -7786,7 +7792,125 @@
   
     
   
+    
+  
 
+  
+    
+      <div class="node teaser ">
+  <h2><a href="/recipe/2007-05-21/sincroniza-tus-ficheros-con-unison">Sincroniza tus ficheros con Unison</a></h2>
+
+  <div class="header">
+  <span class="submitted">
+    2007-05-21
+    
+      
+  <a href="/users.html#javieralso">
+   javieralso
+  </a>
+
+
+    
+  </span>
+
+   <span class="source">
+     —
+     [
+      <a href="https://github.com/CRySoL/web.source/edit/master/_posts/migrated/2007-05-21-sincroniza-tus-ficheros-con-unison.textile">edit</a> |
+      <a href="https://github.com/CRySoL/web.source/raw/master/_posts/migrated/2007-05-21-sincroniza-tus-ficheros-con-unison.textile">raw</a>
+      ]
+   </span>
+
+   <span class="meta">
+     <ul>
+       
+       
+
+
+  
+    
+    	<li><a href="/categories.html#recipe-ref">
+    		recipe
+    	</a></li>
+    
+  
+
+
+
+
+       
+       
+
+
+  
+    
+  
+
+
+
+     </ul>
+   </span>
+
+   
+   <span class="migrated">
+     migrated&nbsp;from&nbsp;<a href="http://crysol.org/node/696">node/696</a>
+   </span>
+   
+
+</div>
+
+
+
+
+  <div class="content">
+    
+      <blockquote>Cómo mantener sincronizados directorios en varios PCs de forma rápida y sencilla utilizando la herramienta libre <b>unison-gtk</b>.</blockquote>
+<h2>Introducción</h2>
+<p>Si tienes varios PCs que usas frecuentemente (por ejemplo un portátil y el ordenador de casa o el del trabajo) tal vez te haya surgido la necesidad de tener ciertos directorios con información &#8220;sensible&#8221; sincronizados entre dichos PCs. Una forma muy sencilla de conseguir eso en <b><span class="caps">GNU</span>/Linux</b> es utilizar la herramienta libre <a href="http://www.cis.upenn.edu/~bcpierce/unison/">unison</a>.</p>
+<h2>Ingredientes</h2>
+<ul>
+  <li>unison</li>
+  <li>unison-gtk</li>
+</ul>
+<p>En mi caso concreto, he utilizado la versión <em>2.9.1</em>, es decir, los paquetes</p>
+<ul>
+  <li>unison2.9.1</li>
+  <li>unison2.9.1-gtk</li>
+</ul>
+<p>Para instalarlos, desde Debian:</p>
+<div class="console">
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">javieralso@richie:~$</span> sudo apt-get install unison2.9.1 unison2.9.1-gtk</code></pre></div></div>
+<p>Tienes que instalar los dos paquetes, ya que aunque <em>unison-gtk</em> necesita de <em>unison</em>, no lo instalará como dependencia. También necesitas <em>ssh</em>.</p>
+<p>Una nota importante es que <b>debes instalar la misma versión de unison en todas las máquinas que vayas a sincronizar</b>. Si intentas sincronizar dos máquinas con distintas versiones de <em>unison</em>, se producirá un error y se abortará la sincronización.</p>
+<h2>Configurando <em>unison</em></h2>
+<p>Este paso sólo hay que realizarlo en una de las máquinas. Suponiendo que has instalado <em>unison2.9.1-gtk</em> lo invocas:</p>
+<div class="console">
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">javieralso@richie:~$</span> unison-2.9.1-gtk</code></pre></div></div>
+<p>Esto abrirá la ventana principal de <em>unison-gtk</em>. Ahora debes crear un perfil. Para ello pulsa el botón <em>Create new profile</em> y escribe un nombre para dicho perfil, por ejemplo &#8220;Documentos casa&#8221;.<br />
+Verás que se ha añadido dicho perfil a la lista de perfiles existentes. Si haces doble click te aparecerá una ventana en la que te pedirá que introduzcas el nombre del directorio que deseas sincronizar dentro de tu máquina local. Pon por ejemplo el directorio <em>~/Documentos</em>. Pulsa en &#8220;aceptar&#8221; y pasarás a la ventana de selección del directorio con el que deseas sincronizar el directorio anterior.</p>
+<p>Utiliza <em><span class="caps">SSH</span></em> para conectar, selecciona esa opción y elige el directorio en la máquina remota con el que deseas sincronizar tus archivos, por ejemplo <em>~/Documentos</em>.<br />
+En el campo <em>Host</em> escribe IP del host con el que deseas sincronizar o el nombre de la máquina si están en el <span class="caps">DNS</span> de tu red. Si el usuario de la máquina remota es distinto del usuario de la máquina local en la que deseas sincronizar, escribe el nombre.</p>
+<h2>Sincronizando</h2>
+<p>Con lo anterior <em>unison</em> está configurado y listo para la sincronización. Ahora, en la ventana principal, selecciona el nombre del perfil que quieras. Dependiendo de la versión que tengas instalada, te pedirá la clave del usuario del equipo remoto, bien por consola (desde la que has invocado a <em>unison-gtk</em>) o bien en una ventana emergente. Una vez que introduces dicha contraseña, <em>unison</em> comenzará a escanear todos los archivos y subdirectorios contenidos en el directorio principal. La primera vez puede tardar tiempo. Cuando termine, verás aparecer una lista con todos los archivos y subdirectorios tanto en la máquina local como en la remota. <em>unison</em> hará una propuesta de actualización basada en la antiguedad de los archivos. Intentará que prevalezcan los archivos más modernos frente a los mas antiguos.</p>
+<p>Todo ésto se verá con una flecha que indica la dirección en la que se llevará a cabo la actualización. Si hubiese dos archivos o subdirectorios con el mismo nombre y <em>unison</em> no supiese cual de los dos elegir, pondría una interrogación roja entre medias. Puedes cambiar la dirección de sincronización con las teclas de cursor. Cuando estés seguro, pulsa el botón <em>GO</em> y <em>unison</em> comenzará la sincronización.</p>
+<p>La primera vez que se lleve a cabo la sincronización, es muy recomendable que uno de los directorios se encuentre completamente vacío; de ese modo se evitan mucho problemas.</p>
+<h2>Referencias</h2>
+<ul>
+	<li><a href="http://">Unison</a><a href="http://www.cis.upenn.edu/~bcpierce/unison/">www.cis.upenn.edu/~bcpierce/unison/</a></li>
+	<li><a href="http://bulma.net/body.phtml?nIdNoticia=2113">¿Sincronizar varios ordenadores o backups? unison</a></li>
+</ul>
+    
+  </div>
+
+  <div class="footer">
+    
+  </div>
+
+</div>
+
+
+
+    
   
     
       <div class="node teaser ">
@@ -9068,139 +9192,6 @@ Si no ves nada en un rato, es probable que hayas metido la pata. Lo siento. Repa
 
     
   
-    
-      <div class="node teaser ">
-  <h2><a href="/recipe/2007-05-15/ajustes-al-tinyos-2">Ajustes al tinyOS 2</a></h2>
-
-  <div class="header">
-  <span class="submitted">
-    2007-05-15
-    
-      
-  <a href="/users.html#javieralso">
-   javieralso
-  </a>
-
-
-    
-  </span>
-
-   <span class="source">
-     —
-     [
-      <a href="https://github.com/CRySoL/web.source/edit/master/_posts/migrated/2007-05-15-ajustes-al-tinyos-2.html">edit</a> |
-      <a href="https://github.com/CRySoL/web.source/raw/master/_posts/migrated/2007-05-15-ajustes-al-tinyos-2.html">raw</a>
-      ]
-   </span>
-
-   <span class="meta">
-     <ul>
-       
-       
-
-
-  
-    
-    	<li><a href="/categories.html#recipe-ref">
-    		recipe
-    	</a></li>
-    
-  
-
-
-
-
-       
-       
-
-
-  
-    
-    	<li><a href="/tags.html#embedded-ref">embedded </a></li>
-    
-    	<li><a href="/tags.html#Arco-ref">Arco </a></li>
-    
-  
-
-
-
-     </ul>
-   </span>
-
-   
-   <span class="migrated">
-     migrated&nbsp;from&nbsp;<a href="http://crysol.org/node/687">node/687</a>
-   </span>
-   
-
-</div>
-
-
-
-
-  <div class="content">
-    
-      <blockquote>Algunos parámetros que hay que configurar (modificando las librerías) para que las aplicaciones escritas en <b>tinyOS 2</b> funcionen bien y/o se adapten a tus necesidades específicas.
-</blockquote>
-
-
-<h2>Frecuencia de transmisión/Recepción de la radio</h2>
-
-Los dispositivos que utilizan el chip de radio <a href="http://www.chipcon.com/index.cfm?kat_id=2&subkat_id=12&dok_id=14">cc1000</a> de <a href="http://www.chipcon.com">Chipcon</a> pueden no funcionar bien en <b>tinyOS 2</b> debido a que en las motas, estos chips deben estar configurados para funcionar en el rango de <b>915 a 998 MHz</b> y por defecto no es así. La forma de solucionar ésto es editando el archivo <em>CC1000Const.h</em>. Suponiendo que tienes el árbol de tinyOS instalado en <em>/opt/tinyos-2.x/</em>, deberás modificar el archivo <em>/opt/tinyos-2.x/tos/chips/cc1000/CC1000Const.h</em> y hacer que la macro que define la constante <em>CC1K_DEF_PRESET</em> quede de la siguiente forma:
-
-<pre>
-#ifndef CC1K_DEF_PRESET
-#define CC1K_DEF_PRESET	(CC1K_915_998_MHZ)
-#endif 
-</pre>
-
-De éste modo, en los futuros programas, la radio se configurará para funcionar a la frecuencia correcta.
-
-<h2>Longitud del campo de datos en la estructura <tt>message_t</tt></h2>
-
-La estructura <a href="http://www.tinyos.net/tinyos-2.x/doc/html/tep111.html"><em>message_t</em></a> proporciona una abstracción para enviar y recibir mensajes a través de la radio o del puerto serie. El campo de datos de ésta estructura, tiene una longitud máxima prefijada de 28 Bytes, que en muchos casos puede ser mas que suficiente, pero en otras ocasiones podemos quedarnos cortos. 
-
-Para solucionar ésto, debemos pasar a <em>nesC</em> el flag <em>DTOSH_DATA_LENGTH</em> para indicar la longitud máxima que queremos que tenga dicho campo de datos.
-
-La forma de hacer ésto es editando el fichero <tt>Makefile</tt> de tu proyecto añadiendo lo siguiente:
-
-<pre>
-<b>NESC_FLAGS ?= -DTOSH_DATA_LENGTH=250</b>
-
-COMPONENT=sampleApp
-include $(MAKERULES)
-</pre>
-
-No suele ser recomendable definir una longitud mayor que esa, ya que puede haber problemas de compilación.
-
-<h2>Instalación de librerías propias</h2>
-
-Si tenemos pensado escribir nuestros propios módulos e interfaces, como se explica en una <a href="http://crysol.inf-cr.uclm.es/node/677">receta</a> publicada también en éste portal, podemos guardarlos todos bajo un mismo directorio (por ejemplo <em>~/tinyOS_libs/</em>) y a continuación hacer lo siguiente para que el compilador sepa encontrar dicha librería:
-
-Editamos el archivo <tt>Makefile</tt> de tu proyecto para hacer que incluya el directorio de tu librería:
-
-<pre>
-<b>NESC_FLAGS ?= -I ~/tinyOS/libs/</b>
-
-COMPONENT=sampleApp
-include $(MAKERULES)
-</pre>
-
-Con esto, cuando compiles, se buscarán las librerías también en ese directorio.
-
-    
-  </div>
-
-  <div class="footer">
-    
-  </div>
-
-</div>
-
-
-
-    
-  
 
   <div class="pagination pagination-centered">
   <ul>
@@ -9214,13 +9205,13 @@ Con esto, cuando compiles, se buscarán las librerías también en ese directori
     </li>
   
 
-  <li><a>Page: 66 of 118</a></li>
+  <li><a>Page: 66 of 119</a></li>
 
   
     <li class="next" title="next page">
       <a href="/page67">&rsaquo;</a>
     </li>
-    <li class="next"><a href="/page118" title="last page">&raquo;</a></li>
+    <li class="next"><a href="/page119" title="last page">&raquo;</a></li>
   
 
   </ul>
@@ -9241,7 +9232,7 @@ Con esto, cuando compiles, se buscarán las librerías también en ese directori
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
 	  See <a href="https://github.com/CRySoL/web.source" target="_blank">site sources</a>.
 	  <br/>
-	  Generated at 2014-10-22 12:27:04 +0200
+	  Generated at 2014-10-22 12:41:51 +0200
 	</p>
       </footer>
 

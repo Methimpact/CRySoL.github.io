@@ -5010,6 +5010,8 @@
   
     
   
+    
+  
 
 
 
@@ -5036,6 +5038,8 @@
 <h2>recent</h2>
 <ul>
 
+  <li><a href="/recipe/2014-10-08/introduction-to-ogre3d">Introduccion a Ogre3D</a></li>
+
   <li><a href="/recipe/2014-09-28/nautilus-sort-directories-first">nautilus: list folder before files</a></li>
 
   <li><a href="/recipe/2014-05-27/vagrant-multi-machine">multi machine Vagrantfile</a></li>
@@ -5043,8 +5047,6 @@
   <li><a href="/recipe/2014-05-20/veewee-on-debian">Installing veewee on Debian sid</a></li>
 
   <li><a href="/recipe/2014-05-19/latex-packages">Useful LaTeX packages and their main commands</a></li>
-
-  <li><a href="/recipe/2014-01-22/run-until-fails">Keep repeating a command until it fails</a></li>
 
 </ul>
 </div>
@@ -5056,7 +5058,7 @@
 <tr class="row1">
 <td class="col1">
   <a href="javascript:window.location.href='/categories.html#recipe-ref'; hide_others()"
-     title="597 posts"
+     title="598 posts"
      >recipe</a>
 </td><td class="col2">
   <a href="javascript:window.location.href='/categories.html#tale-ref'; hide_others()"
@@ -5388,6 +5390,10 @@
   <a href="javascript:window.location.href='/tags.html#nautilus-ref'; hide_others()"
      title="1 posts"
      >nautilus</a>
+</td><td class="col2">
+  <a href="javascript:window.location.href='/tags.html#Ogre3D-ref'; hide_others()"
+     title="1 posts"
+     >Ogre3D</a>
 </td></tr>
 
 </table>
@@ -5398,6 +5404,8 @@
 <div class="span9">
   
 
+  
+    
   
     
   
@@ -7850,6 +7858,93 @@
   
     
       <div class="node teaser ">
+  <h2><a href="/recipe/2014-10-08/introduction-to-ogre3d">Introduccion a Ogre3D</a></h2>
+
+  <div class="header">
+  <span class="submitted">
+    2014-10-08
+    
+      
+  <span title="(unknown author)">isaaclacoba?</span>
+
+
+    
+  </span>
+
+   <span class="source">
+     —
+     [
+      <a href="https://github.com/CRySoL/web.source/edit/master/_posts/2014-10-08-introduction-to-ogre3d.textile">edit</a> |
+      <a href="https://github.com/CRySoL/web.source/raw/master/_posts/2014-10-08-introduction-to-ogre3d.textile">raw</a>
+      ]
+   </span>
+
+   <span class="meta">
+     <ul>
+       
+       
+
+
+  
+    
+    	<li><a href="/categories.html#recipe-ref">
+    		recipe
+    	</a></li>
+    
+  
+
+
+
+
+       
+       
+
+
+  
+    
+    	<li><a href="/tags.html#Ogre3D-ref">Ogre3D </a></li>
+    
+  
+
+
+
+     </ul>
+   </span>
+
+   
+
+</div>
+
+
+
+
+  <div class="content">
+    
+      <p>Esta receta se explicara de forma breve que es Ogre3D.</p>
+<p>
+    
+  </div>
+
+  <div class="footer">
+    
+    <div class="more">
+      <a href="/recipe/2014-10-08/introduction-to-ogre3d">
+	
+	  Leer más
+	
+      </a>
+    </div>
+    
+  </div>
+
+</div>
+
+
+
+    
+  
+    
+      <div class="node teaser ">
   <h2><a href="/recipe/2014-09-28/nautilus-sort-directories-first">nautilus: list folder before files</a></h2>
 
   <div class="header">
@@ -8698,103 +8793,6 @@ john   ALL = ALL, NOPASSWD: APT
 
     
   
-    
-      <div class="node teaser ">
-  <h2><a href="/recipe/2013-10-21/git-remove-from-history">git: removing files from history</a></h2>
-
-  <div class="header">
-  <span class="submitted">
-    2013-10-21
-    
-      
-  <a href="/users.html#david_villa">
-   david.villa
-  </a>
-
-
-    
-  </span>
-
-   <span class="source">
-     —
-     [
-      <a href="https://github.com/CRySoL/web.source/edit/master/_posts/2013-10-21-git-remove-from-history.textile">edit</a> |
-      <a href="https://github.com/CRySoL/web.source/raw/master/_posts/2013-10-21-git-remove-from-history.textile">raw</a>
-      ]
-   </span>
-
-   <span class="meta">
-     <ul>
-       
-       
-
-
-  
-    
-    	<li><a href="/categories.html#recipe-ref">
-    		recipe
-    	</a></li>
-    
-  
-
-
-
-
-       
-       
-
-
-  
-    
-    	<li><a href="/tags.html#git-ref">git </a></li>
-    
-    	<li><a href="/tags.html#shell-ref">shell </a></li>
-    
-  
-
-
-
-     </ul>
-   </span>
-
-   
-
-</div>
-
-
-
-
-  <div class="content">
-    
-      <p>That deletes the given files from all the changesets along all the repository history, as they never were commited.</p>
-<p>It is not a very friendly command (it&#8217;s the git style!), but at least it can be done.</p>
-<pre class="console">
-$ git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch &lt;file/dir&gt;' --prune-empty --tag-name-filter cat -- --all
-$ rm -rf .git/refs/original
-$ git reflog expire --expire=now --all
-$ git gc --prune=now
-$ git gc --aggressive --prune=now
-$ git push --force
-</pre>
-<p>Far as I know this is not possible with mercurial</p>
-<h2>References</h2>
-<ul>
-	<li>http://stackoverflow.com/questions/5563564/remove-files-from-git-repo-completely</li>
-	<li>https://help.github.com/articles/remove-sensitive-data</li>
-</ul>
-    
-  </div>
-
-  <div class="footer">
-    
-  </div>
-
-</div>
-
-
-
-    
-  
 
   <div class="pagination pagination-centered">
   <ul>
@@ -8804,13 +8802,13 @@ $ git push --force
     <li class="prev disabled"><a>&lsaquo;</a></li>
   
 
-  <li><a>Page: 1 of 118</a></li>
+  <li><a>Page: 1 of 119</a></li>
 
   
     <li class="next" title="next page">
       <a href="/page2">&rsaquo;</a>
     </li>
-    <li class="next"><a href="/page118" title="last page">&raquo;</a></li>
+    <li class="next"><a href="/page119" title="last page">&raquo;</a></li>
   
 
   </ul>
@@ -8831,7 +8829,7 @@ $ git push --force
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
 	  See <a href="https://github.com/CRySoL/web.source" target="_blank">site sources</a>.
 	  <br/>
-	  Generated at 2014-10-22 12:27:04 +0200
+	  Generated at 2014-10-22 12:41:51 +0200
 	</p>
       </footer>
 
