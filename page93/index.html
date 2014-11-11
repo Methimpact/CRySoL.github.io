@@ -5038,6 +5038,8 @@
 <h2>recent</h2>
 <ul>
 
+  <li><a href="/recipe/2014-11-11/schroot-snapshots">schroot: snapshot chroots</a></li>
+
   <li><a href="/recipe/2014-10-08/introduction-to-ogre3d">Introduccion a Ogre3D</a></li>
 
   <li><a href="/recipe/2014-09-28/nautilus-sort-directories-first">nautilus: list folder before files</a></li>
@@ -5045,8 +5047,6 @@
   <li><a href="/recipe/2014-05-27/vagrant-multi-machine">multi machine Vagrantfile</a></li>
 
   <li><a href="/recipe/2014-05-20/veewee-on-debian">Installing veewee on Debian sid</a></li>
-
-  <li><a href="/recipe/2014-05-19/latex-packages">Useful LaTeX packages and their main commands</a></li>
 
 </ul>
 </div>
@@ -5058,7 +5058,7 @@
 <tr class="row1">
 <td class="col1">
   <a href="javascript:window.location.href='/categories.html#recipe-ref'; hide_others()"
-     title="598 posts"
+     title="599 posts"
      >recipe</a>
 </td><td class="col2">
   <a href="javascript:window.location.href='/categories.html#tale-ref'; hide_others()"
@@ -5394,6 +5394,11 @@
   <a href="javascript:window.location.href='/tags.html#Ogre3D-ref'; hide_others()"
      title="1 posts"
      >Ogre3D</a>
+</td></tr>
+<tr class="row31"><td class="col1">
+  <a href="javascript:window.location.href='/tags.html#schroot-ref'; hide_others()"
+     title="1 posts"
+     >schroot</a>
 </td></tr>
 
 </table>
@@ -7794,7 +7799,101 @@
   
     
   
+    
+  
 
+  
+    
+      <div class="node teaser ">
+  <h2><a href="/enquiry/2006-07-08/iptables-en-fc5">Iptables en FC5</a></h2>
+
+  <div class="header">
+  <span class="submitted">
+    2006-07-08
+    
+      
+  <a href="/users.html#jsarthou">
+   jsarthou
+  </a>
+
+
+    
+  </span>
+
+   <span class="source">
+     —
+     [
+      <a href="https://github.com/CRySoL/web.source/edit/master/_posts/migrated/2006-07-08-iptables-en-fc5.html">edit</a> |
+      <a href="https://github.com/CRySoL/web.source/raw/master/_posts/migrated/2006-07-08-iptables-en-fc5.html">raw</a>
+      ]
+   </span>
+
+   <span class="meta">
+     <ul>
+       
+       
+
+
+  
+    
+    	<li><a href="/categories.html#enquiry-ref">
+    		enquiry
+    	</a></li>
+    
+  
+
+
+
+
+       
+       
+
+
+  
+    
+  
+
+
+
+     </ul>
+   </span>
+
+   
+   <span class="migrated">
+     migrated&nbsp;from&nbsp;<a href="http://crysol.org/node/343">node/343</a>
+   </span>
+   
+
+</div>
+
+
+
+
+  <div class="content">
+    
+      En un servidor Fedora Core 5, que hace de Proxy, quiero darle tambien el servicio de Web, pero, me encontre con el inconveniente que tengo una regla que direcciono todo el port 80 al 8080, por lo tanto la web local del proxy no funcionaba hasta que en la misma regla incluí un -d ! proxy y todo de maravillas.
+
+
+    
+  </div>
+
+  <div class="footer">
+    
+    <div class="more">
+      <a href="/enquiry/2006-07-08/iptables-en-fc5">
+	
+	  Leer más
+	
+      </a>
+    </div>
+    
+  </div>
+
+</div>
+
+
+
+    
   
     
       <div class="node teaser ">
@@ -8690,133 +8789,6 @@ Echadle un vistazo y ya me contareis que os parece.
 
     
   
-    
-      <div class="node teaser ">
-  <h2><a href="/recipe/2006-06-13/backup-para-mviles-siemens">Backup para móviles Siemens</a></h2>
-
-  <div class="header">
-  <span class="submitted">
-    2006-06-13
-    
-      
-  <a href="/users.html#magmax">
-   magmax
-  </a>
-
-
-    
-  </span>
-
-   <span class="source">
-     —
-     [
-      <a href="https://github.com/CRySoL/web.source/edit/master/_posts/migrated/2006-06-13-backup-para-mviles-siemens.html">edit</a> |
-      <a href="https://github.com/CRySoL/web.source/raw/master/_posts/migrated/2006-06-13-backup-para-mviles-siemens.html">raw</a>
-      ]
-   </span>
-
-   <span class="meta">
-     <ul>
-       
-       
-
-
-  
-    
-    	<li><a href="/categories.html#recipe-ref">
-    		recipe
-    	</a></li>
-    
-  
-
-
-
-
-       
-       
-
-
-  
-    
-  
-
-
-
-     </ul>
-   </span>
-
-   
-   <span class="migrated">
-     migrated&nbsp;from&nbsp;<a href="http://crysol.org/node/331">node/331</a>
-   </span>
-   
-
-</div>
-
-
-
-
-  <div class="content">
-    
-      <blockquote>
-Tengo un siemens, y me gusta hacer backups periódicos. La perioricidad es variable (cuando me quedo sin memoria para los mensajes), pero me gusta que sea sencillo. Aquí tienes un pequeño script que usa scmxx.
-</blockquote>
-
-<h1>Qué necesitamos</h1>
-
-Necesitamos un cable y un móvil soportado por scmxx. También necesitaremos scmxx, por supuesto.
-
-<h1>El script</h1>
-
-Sin más, ahí va:
-
-
-<div>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
-
-<span class="nv">DIR</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&quot;%Y%m%d&quot;</span><span class="sb">`</span>
-<span class="nv">SCMXX_TTY</span><span class="o">=</span>/dev/ttyUSB0
-
-<span class="nv">MEMS</span><span class="o">=</span><span class="s2">&quot;FD SM ON LD MC RC OW SD MS CD BL RD CS VCF&quot;</span>
-
-mkdir <span class="nv">$DIR</span>
-
-scmxx --get --pbook --sms --slot<span class="o">=</span>all --out<span class="o">=</span><span class="nv">$DIR</span>/sms.p
-
-<span class="k">for</span> i in <span class="nv">$MEMS</span><span class="p">;</span>
-<span class="k">do</span>
-  scmxx --get --pbook --mem<span class="o">=</span><span class="nv">$i</span> --out<span class="o">=</span><span class="nv">$DIR</span>/<span class="nv">$i</span>.p <span class="p">;</span>
-<span class="k">done</span></code></pre></div>
-</div>
-
-<h1>Configurar el script</h1>
-
-Como podéis ver, el script crea un directorio con la fecha actual, dentro de la que meterá un montón de ficheritos terminados en .p. Éstos tendrán el contenido de cada una de las memorias.
-
-Pero... ¿Cómo sabemos qué memorias debemos consultar? Es fácil: basta con hacer:
-
-
-<div class="console">
-<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> scmxx --info</code></pre></div>
-</div>
-
-En caso de que no encuentre nuestro móvil, el problema está en el puerto donde lo conectamos. Por ello, recomiendo que establezcamos la variable de entorno <tt>SCMXX_TTY</tt>. Como en mi caso está en el USB, el valor de esta variable debe ser <tt>/dev/ttyUSB0</tt>. Se puede indicar en línea de órdenes, pero me falla bastante.
-
-Poco más que decir. Existe un GUI para scmxx (gscmxx) pero es "más malo" que un dolor de muelas (por el momento).
-
-    
-  </div>
-
-  <div class="footer">
-    
-  </div>
-
-</div>
-
-
-
-    
-  
 
   <div class="pagination pagination-centered">
   <ul>
@@ -8857,7 +8829,7 @@ Poco más que decir. Existe un GUI para scmxx (gscmxx) pero es "más malo" que u
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
 	  See <a href="https://github.com/CRySoL/web.source" target="_blank">site sources</a>.
 	  <br/>
-	  Generated at 2014-11-10 10:52:30 +0100
+	  Generated at 2014-11-11 12:22:32 +0100
 	</p>
       </footer>
 

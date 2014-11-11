@@ -5038,6 +5038,8 @@
 <h2>recent</h2>
 <ul>
 
+  <li><a href="/recipe/2014-11-11/schroot-snapshots">schroot: snapshot chroots</a></li>
+
   <li><a href="/recipe/2014-10-08/introduction-to-ogre3d">Introduccion a Ogre3D</a></li>
 
   <li><a href="/recipe/2014-09-28/nautilus-sort-directories-first">nautilus: list folder before files</a></li>
@@ -5045,8 +5047,6 @@
   <li><a href="/recipe/2014-05-27/vagrant-multi-machine">multi machine Vagrantfile</a></li>
 
   <li><a href="/recipe/2014-05-20/veewee-on-debian">Installing veewee on Debian sid</a></li>
-
-  <li><a href="/recipe/2014-05-19/latex-packages">Useful LaTeX packages and their main commands</a></li>
 
 </ul>
 </div>
@@ -5058,7 +5058,7 @@
 <tr class="row1">
 <td class="col1">
   <a href="javascript:window.location.href='/categories.html#recipe-ref'; hide_others()"
-     title="598 posts"
+     title="599 posts"
      >recipe</a>
 </td><td class="col2">
   <a href="javascript:window.location.href='/categories.html#tale-ref'; hide_others()"
@@ -5394,6 +5394,11 @@
   <a href="javascript:window.location.href='/tags.html#Ogre3D-ref'; hide_others()"
      title="1 posts"
      >Ogre3D</a>
+</td></tr>
+<tr class="row31"><td class="col1">
+  <a href="javascript:window.location.href='/tags.html#schroot-ref'; hide_others()"
+     title="1 posts"
+     >schroot</a>
 </td></tr>
 
 </table>
@@ -7794,7 +7799,155 @@
   
     
   
+    
+  
 
+  
+    
+      <div class="node teaser ">
+  <h2><a href="/recipe/2008-02-17/divide-y-vencers">Divide y vencerás</a></h2>
+
+  <div class="header">
+  <span class="submitted">
+    2008-02-17
+    
+      
+  <a href="/users.html#manueldavid">
+   manueldavid
+  </a>
+
+
+    
+  </span>
+
+   <span class="source">
+     —
+     [
+      <a href="https://github.com/CRySoL/web.source/edit/master/_posts/migrated/2008-02-17-divide-y-vencers.textile">edit</a> |
+      <a href="https://github.com/CRySoL/web.source/raw/master/_posts/migrated/2008-02-17-divide-y-vencers.textile">raw</a>
+      ]
+   </span>
+
+   <span class="meta">
+     <ul>
+       
+       
+
+
+  
+    
+    	<li><a href="/categories.html#recipe-ref">
+    		recipe
+    	</a></li>
+    
+  
+
+
+
+
+       
+       
+
+
+  
+    
+  
+
+
+
+     </ul>
+   </span>
+
+   
+   <span class="migrated">
+     migrated&nbsp;from&nbsp;<a href="http://crysol.org/node/858">node/858</a>
+   </span>
+   
+
+</div>
+
+
+
+
+  <div class="content">
+    
+      <blockquote class="head">
+Esta receta pretende dar a conocer al lector en qué consiste la técnica de diseño de algoritmos &#8220;divide y vencerás&#8221;. Para ello se incluyen a continuación unas breves nociones teóricas y un ejemplo práctico sencillo.
+</blockquote>
+<h2>¿En qué consiste la técnica &#8220;divide y vencerás&#8221;?</h2>
+<p>En el mundo de las ciencias de la computación es una técnica de diseño de algoritmos que consiste en resolver un problema a partir de la solución de subproblemas del mismo tipo, pero de menor tamaño. Si los subproblemas son todavía relativamente grandes se aplicará de nuevo esta técnica hasta alcanzar subproblemas lo suficientemente pequeños para ser solucionados directamente. Por último, habrá que combinar las soluciones obtenidas en los subproblemas para obtener la solución del problema inicial.</p>
+<h2>Estructura del algoritmo en versión recursiva</h2>
+<p>El pseudocódigo del algoritmo Divide y Vencerás en versión recursiva es el siguiente:</p>
+<div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">DYV(int tamaño){
+         if(facil(tamaño))
+             return (resolver(tamaño))
+         else{
+             dividir(tamaño)
+             //Suponemos j divisiones
+             return (combinar(DYV(n1), ..., DYV(nj)))
+         }
+      }</code></pre></div></div>
+<h2>Estructura del algoritmo en versión iterativa</h2>
+<p>El pseudocódigo del algoritmo Divide y Vencerás en versión iterativa es el siguiente (yo personalmente he visto muchas más veces implementada la versión recursiva que esta iterativa):</p>
+<div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">DYV(int tamaño){
+         while(tamaño &gt;= 1){
+              for(i=1; i&lt;=k; i++)
+                   s[i] = resolver(ni);
+              combinar(s);
+              modificar(tamaño);
+         }
+    }</code></pre></div></div>
+<h2>Ejemplo sencillo de la técnica &#8220;divide y vencerás&#8221; en C</h2>
+<p>Se trata de solucionar el siguiente problema:<br />
+Diseñe un algoritmo “Divide y Vencerás” que calcule xn (x elevado a n) con un coste O(n log n).</p>
+<div>
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">exponencial_n</span><span class="p">(</span><span class="kt">int</span> <span class="n">base</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exponente</span><span class="p">){</span>
+
+	<span class="kt">int</span> <span class="n">resultado_parcial</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">exponente_actual</span><span class="p">;</span>
+
+	<span class="k">switch</span><span class="p">(</span><span class="n">exponente</span><span class="p">){</span>
+		<span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+			<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+		<span class="k">break</span><span class="p">;</span>
+
+		<span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+			<span class="k">return</span> <span class="n">base</span><span class="p">;</span>
+		<span class="k">break</span><span class="p">;</span>
+
+		<span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+			<span class="k">return</span> <span class="p">(</span><span class="n">base</span> <span class="o">*</span> <span class="n">base</span><span class="p">);</span>
+		<span class="k">break</span><span class="p">;</span>
+
+		<span class="k">default</span><span class="o">:</span>
+			<span class="n">exponente_actual</span> <span class="o">=</span> <span class="n">exponente</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="cm">/*Dividimos a la mitad*/</span>
+			<span class="n">resultado_parcial</span> <span class="o">=</span> <span class="n">exponencial_n</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">exponente_actual</span><span class="p">);</span>
+
+			<span class="k">if</span><span class="p">(</span><span class="n">exponente</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+				<span class="k">return</span> <span class="n">resultado_parcial</span><span class="o">*</span><span class="n">resultado_parcial</span><span class="p">;</span> <span class="cm">/*si el exponente es par*/</span>
+			<span class="k">else</span>
+				<span class="k">return</span> <span class="n">resultado_parcial</span><span class="o">*</span><span class="n">resultado_parcial</span><span class="o">*</span><span class="n">base</span><span class="p">;</span> <span class="cm">/*si es impar*/</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div></div>
+<h2>Bibliografía</h2>
+<ul>
+	<li>&#8220;Divide y vencerás&#8221;, Ampliación de programación. <span class="caps">ESI</span>. Miguel Angel Redondo.</li>
+	<li><a href="http://es.wikipedia.org/wiki/Algoritmo_divide_y_vencer%C3%A1s">Divide y vencerás</a></li>
+</ul>
+    
+  </div>
+
+  <div class="footer">
+    
+  </div>
+
+</div>
+
+
+
+    
   
     
       <div class="node teaser ">
@@ -8710,89 +8863,6 @@ dichas variables directamente:<br />
 
     
   
-    
-      <div class="node teaser ">
-  <h2><a href="/new/2008-01-25/dell-vende-porttiles-con-ubuntu-linux-de-serie-pero">Dell vende portátiles con Ubuntu Linux de serie... pero...</a></h2>
-
-  <div class="header">
-  <span class="submitted">
-    2008-01-25
-    
-      
-  <a href="/users.html#int-0">
-   int-0
-  </a>
-
-
-    
-  </span>
-
-   <span class="source">
-     —
-     [
-      <a href="https://github.com/CRySoL/web.source/edit/master/_posts/migrated/2008-01-25-dell-vende-porttiles-con-ubuntu-linux-de-serie-pero.textile">edit</a> |
-      <a href="https://github.com/CRySoL/web.source/raw/master/_posts/migrated/2008-01-25-dell-vende-porttiles-con-ubuntu-linux-de-serie-pero.textile">raw</a>
-      ]
-   </span>
-
-   <span class="meta">
-     <ul>
-       
-       
-
-
-  
-    
-    	<li><a href="/categories.html#new-ref">
-    		new
-    	</a></li>
-    
-  
-
-
-
-
-       
-       
-
-
-  
-    
-  
-
-
-
-     </ul>
-   </span>
-
-   
-   <span class="migrated">
-     migrated&nbsp;from&nbsp;<a href="http://crysol.org/node/845">node/845</a>
-   </span>
-   
-
-</div>
-
-
-
-
-  <div class="content">
-    
-      <p>&#8230;más caros que si traen Windows? ¿por qué?</p>
-<p>Mirad, el mismo modelo de portátil, con las mismas características&#8230; pero uno con hasefroch y el otro con Ubuntu Linux.</p>
-    
-  </div>
-
-  <div class="footer">
-    
-  </div>
-
-</div>
-
-
-
-    
-  
 
   <div class="pagination pagination-centered">
   <ul>
@@ -8833,7 +8903,7 @@ dichas variables directamente:<br />
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
 	  See <a href="https://github.com/CRySoL/web.source" target="_blank">site sources</a>.
 	  <br/>
-	  Generated at 2014-11-10 10:52:30 +0100
+	  Generated at 2014-11-11 12:22:32 +0100
 	</p>
       </footer>
 

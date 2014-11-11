@@ -5038,6 +5038,8 @@
 <h2>recent</h2>
 <ul>
 
+  <li><a href="/recipe/2014-11-11/schroot-snapshots">schroot: snapshot chroots</a></li>
+
   <li><a href="/recipe/2014-10-08/introduction-to-ogre3d">Introduccion a Ogre3D</a></li>
 
   <li><a href="/recipe/2014-09-28/nautilus-sort-directories-first">nautilus: list folder before files</a></li>
@@ -5045,8 +5047,6 @@
   <li><a href="/recipe/2014-05-27/vagrant-multi-machine">multi machine Vagrantfile</a></li>
 
   <li><a href="/recipe/2014-05-20/veewee-on-debian">Installing veewee on Debian sid</a></li>
-
-  <li><a href="/recipe/2014-05-19/latex-packages">Useful LaTeX packages and their main commands</a></li>
 
 </ul>
 </div>
@@ -5058,7 +5058,7 @@
 <tr class="row1">
 <td class="col1">
   <a href="javascript:window.location.href='/categories.html#recipe-ref'; hide_others()"
-     title="598 posts"
+     title="599 posts"
      >recipe</a>
 </td><td class="col2">
   <a href="javascript:window.location.href='/categories.html#tale-ref'; hide_others()"
@@ -5395,6 +5395,11 @@
      title="1 posts"
      >Ogre3D</a>
 </td></tr>
+<tr class="row31"><td class="col1">
+  <a href="javascript:window.location.href='/tags.html#schroot-ref'; hide_others()"
+     title="1 posts"
+     >schroot</a>
+</td></tr>
 
 </table>
 </div>
@@ -5404,6 +5409,8 @@
 <div class="span9">
   
 
+  
+    
   
     
   
@@ -7858,6 +7865,96 @@
   
     
       <div class="node teaser ">
+  <h2><a href="/recipe/2014-11-11/schroot-snapshots">schroot: snapshot chroots</a></h2>
+
+  <div class="header">
+  <span class="submitted">
+    2014-11-11
+    
+      
+  <a href="/users.html#david_villa">
+   david.villa
+  </a>
+
+
+    
+  </span>
+
+   <span class="source">
+     —
+     [
+      <a href="https://github.com/CRySoL/web.source/edit/master/_posts/2014-11-11-schroot-snapshots.textile">edit</a> |
+      <a href="https://github.com/CRySoL/web.source/raw/master/_posts/2014-11-11-schroot-snapshots.textile">raw</a>
+      ]
+   </span>
+
+   <span class="meta">
+     <ul>
+       
+       
+
+
+  
+    
+    	<li><a href="/categories.html#recipe-ref">
+    		recipe
+    	</a></li>
+    
+  
+
+
+
+
+       
+       
+
+
+  
+    
+    	<li><a href="/tags.html#schroot-ref">schroot </a></li>
+    
+  
+
+
+
+     </ul>
+   </span>
+
+   
+
+</div>
+
+
+
+
+  <div class="content">
+    
+      <p>According to its manual page &#8220;<code>schroot</code> allows the user to run a command or a login shell in a chroot environment&#8221;. As many others (chroot, lxc, docker, vserver) it is a OS virtualizer. Often, these &#8220;chroot environments&#8221; are known as &#8220;jails&#8221;. A jail is much faster that a full virtualizer as vmware, virtualbox, etc.</p>
+<p>In that recipe we explore a interesting feature: jail snapshoting</p>
+<p>
+    
+  </div>
+
+  <div class="footer">
+    
+    <div class="more">
+      <a href="/recipe/2014-11-11/schroot-snapshots">
+	
+	  Leer más
+	
+      </a>
+    </div>
+    
+  </div>
+
+</div>
+
+
+
+    
+  
+    
+      <div class="node teaser ">
   <h2><a href="/recipe/2014-10-08/introduction-to-ogre3d">Introduccion a Ogre3D</a></h2>
 
   <div class="header">
@@ -8698,101 +8795,6 @@ dpkg: warning: parsing file '/var/lib/dpkg/available' near line 2687 package 'lo
 
     
   
-    
-      <div class="node teaser ">
-  <h2><a href="/recipe/2013-10-28/file-grain-sudo">Fine-grain sudo</a></h2>
-
-  <div class="header">
-  <span class="submitted">
-    2013-10-28
-    
-      
-  <a href="/users.html#david_villa">
-   david.villa
-  </a>
-
-
-    
-  </span>
-
-   <span class="source">
-     —
-     [
-      <a href="https://github.com/CRySoL/web.source/edit/master/_posts/2013-10-28-file-grain-sudo.textile">edit</a> |
-      <a href="https://github.com/CRySoL/web.source/raw/master/_posts/2013-10-28-file-grain-sudo.textile">raw</a>
-      ]
-   </span>
-
-   <span class="meta">
-     <ul>
-       
-       
-
-
-  
-    
-    	<li><a href="/categories.html#recipe-ref">
-    		recipe
-    	</a></li>
-    
-  
-
-
-
-
-       
-       
-
-
-  
-    
-    	<li><a href="/tags.html#sudo-ref">sudo </a></li>
-    
-    	<li><a href="/tags.html#shell-ref">shell </a></li>
-    
-  
-
-
-
-     </ul>
-   </span>
-
-   
-
-</div>
-
-
-
-
-  <div class="content">
-    
-      <p><code>sudo</code> lets a user run commands as she was a different user (usually root). The common configuration of <code>sudo</code> requests your password before run the command. As that is annoying, you may be tempted to write something like this in your <code>/etc/sudoers</code>:</p>
-<pre>
-john   ALL = ALL, NOPASSWD: APT
-</pre>
-<p>But this may be a big security issue&#8230;</p>
-<p>
-    
-  </div>
-
-  <div class="footer">
-    
-    <div class="more">
-      <a href="/recipe/2013-10-28/file-grain-sudo">
-	
-          Read more
-	
-      </a>
-    </div>
-    
-  </div>
-
-</div>
-
-
-
-    
-  
 
   <div class="pagination pagination-centered">
   <ul>
@@ -8829,7 +8831,7 @@ john   ALL = ALL, NOPASSWD: APT
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
 	  See <a href="https://github.com/CRySoL/web.source" target="_blank">site sources</a>.
 	  <br/>
-	  Generated at 2014-11-10 10:52:30 +0100
+	  Generated at 2014-11-11 12:22:32 +0100
 	</p>
       </footer>
 

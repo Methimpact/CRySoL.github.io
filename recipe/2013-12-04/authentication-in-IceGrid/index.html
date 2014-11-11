@@ -5170,6 +5170,8 @@
   <h2>recent</h2>
   <ul>
   
+    <li><a href="/recipe/2014-11-11/schroot-snapshots">schroot: snapshot chroots</a></li>
+  
     <li><a href="/recipe/2014-10-08/introduction-to-ogre3d">Introduccion a Ogre3D</a></li>
   
     <li><a href="/recipe/2014-09-28/nautilus-sort-directories-first">nautilus: list folder before files</a></li>
@@ -5177,8 +5179,6 @@
     <li><a href="/recipe/2014-05-27/vagrant-multi-machine">multi machine Vagrantfile</a></li>
   
     <li><a href="/recipe/2014-05-20/veewee-on-debian">Installing veewee on Debian sid</a></li>
-  
-    <li><a href="/recipe/2014-05-19/latex-packages">Useful LaTeX packages and their main commands</a></li>
   
   </ul>
 </div>
@@ -5195,23 +5195,17 @@
       <div class="content">
 	<p>Esta receta muestra cómo proporciona, de una forma sencilla, un mecanismo de autenticación a IceGrid.</p>
 <p><!--break--></p>
-<p>El Registry de IceGrid es un elemento crítico, porque el acceso al Registry implica acceso<br />
-a todos los nodos del grid. Por tanto necesitamos una forma de autenticar a los usuarios.</p>
-<p>Esta receta explica el mecanismo más simple de autenticación que proporciona Ice. Se basa<br />
-en un simple fichero de texto con líneas de pares &#8220;usuario contraseña&#8221; (separado por un<br />
-espacio). La contraseña está cifrada con <span class="caps">DES</span>.</p>
+<p>El Registry de IceGrid es un elemento crítico, porque el acceso al Registry implica acceso a todos los nodos del grid. Por tanto necesitamos una forma de autenticar a los usuarios.</p>
+<p>Esta receta explica el mecanismo más simple de autenticación que proporciona Ice. Se basa en un simple fichero de texto con líneas de pares &#8220;usuario contraseña&#8221; (separado por un espacio). La contraseña está cifrada con <span class="caps">DES</span>.</p>
 <p>Para ello, hemos elegido utilizar la siguiente propiedad de IceGrid:</p>
 <pre>
 IceGrid.Registry.AdminCryptPasswords=admin-passwords
 </pre>
-<p>Esta propiedad se debe escribir en el fichero de cofiguración del nodo que va a contener<br />
-el Registry. Esta propiedad acepta un fichero con la siguiente estructura:</p>
+<p>Esta propiedad se debe escribir en el fichero de cofiguración del nodo que va a contener el Registry. Esta propiedad acepta un fichero con la siguiente estructura:</p>
 <pre>
 usuario Clave_encriptada
 </pre>
-<p>Este fichero tiene la misma estructura que el fichero de claves que utiliza Glacier2 para<br />
-las sesioes seguras a los routers que define.  Las contraseñas del fichero se pueden<br />
-encriptan mediante ssl. Por ejemplo:</p>
+<p>Este fichero tiene la misma estructura que el fichero de claves que utiliza Glacier2 para las sesioes seguras a los routers que define.  Las contraseñas del fichero se pueden encriptan mediante ssl. Por ejemplo:</p>
 <pre class="console">
 $ openssl passwd &gt;&gt; admin-passwords
 </pre>
@@ -5292,7 +5286,7 @@ $ openssl passwd &gt;&gt; admin-passwords
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
 	  See <a href="https://github.com/CRySoL/web.source" target="_blank">site sources</a>.
 	  <br/>
-	  Generated at 2014-11-10 10:52:30 +0100
+	  Generated at 2014-11-11 12:22:32 +0100
 	</p>
       </footer>
 
