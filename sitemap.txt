@@ -2461,6 +2461,7 @@ http://CRySoL.github.io/page117/index.html
 http://CRySoL.github.io/page118/index.html
 http://CRySoL.github.io/page119/index.html
 
+http://CRySoL.github.io/recipe/2014-11-20/apt-mirror
 http://CRySoL.github.io/recipe/2014-11-11/schroot-snapshots
 http://CRySoL.github.io/recipe/2014-10-08/introduction-to-ogre3d
 http://CRySoL.github.io/recipe/2014-09-28/nautilus-sort-directories-first

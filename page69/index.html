@@ -5038,6 +5038,8 @@
 <h2>recent</h2>
 <ul>
 
+  <li><a href="/recipe/2014-11-20/apt-mirror">apt-mirror: the debian mirror that just works</a></li>
+
   <li><a href="/recipe/2014-11-11/schroot-snapshots">schroot: snapshot chroots</a></li>
 
   <li><a href="/recipe/2014-10-08/introduction-to-ogre3d">Introduccion a Ogre3D</a></li>
@@ -5045,8 +5047,6 @@
   <li><a href="/recipe/2014-09-28/nautilus-sort-directories-first">nautilus: list folder before files</a></li>
 
   <li><a href="/recipe/2014-05-27/vagrant-multi-machine">multi machine Vagrantfile</a></li>
-
-  <li><a href="/recipe/2014-05-20/veewee-on-debian">Installing veewee on Debian sid</a></li>
 
 </ul>
 </div>
@@ -5058,7 +5058,7 @@
 <tr class="row1">
 <td class="col1">
   <a href="javascript:window.location.href='/categories.html#recipe-ref'; hide_others()"
-     title="599 posts"
+     title="600 posts"
      >recipe</a>
 </td><td class="col2">
   <a href="javascript:window.location.href='/categories.html#tale-ref'; hide_others()"
@@ -5347,7 +5347,7 @@
      >agile</a>
 </td><td class="col2">
   <a href="javascript:window.location.href='/tags.html#debian-ref'; hide_others()"
-     title="2 posts"
+     title="3 posts"
      >debian</a>
 </td></tr>
 <tr class="row26"><td class="col1">
@@ -5399,6 +5399,10 @@
   <a href="javascript:window.location.href='/tags.html#schroot-ref'; hide_others()"
      title="1 posts"
      >schroot</a>
+</td><td class="col2">
+  <a href="javascript:window.location.href='/tags.html#apt-mirror-ref'; hide_others()"
+     title="1 posts"
+     >apt-mirror</a>
 </td></tr>
 
 </table>
@@ -7801,7 +7805,115 @@
   
     
   
+    
+  
 
+  
+    
+      <div class="node teaser ">
+  <h2><a href="/recipe/2007-04-24/emule-y-torrents-en-gnu-linux">Emule y torrents en GNU/Linux</a></h2>
+
+  <div class="header">
+  <span class="submitted">
+    2007-04-24
+    
+      
+  <a href="/users.html#int-0">
+   int-0
+  </a>
+
+
+    
+  </span>
+
+   <span class="source">
+     —
+     [
+      <a href="https://github.com/CRySoL/web.source/edit/master/_posts/migrated/2007-04-24-emule-y-torrents-en-gnu-linux.html">edit</a> |
+      <a href="https://github.com/CRySoL/web.source/raw/master/_posts/migrated/2007-04-24-emule-y-torrents-en-gnu-linux.html">raw</a>
+      ]
+   </span>
+
+   <span class="meta">
+     <ul>
+       
+       
+
+
+  
+    
+    	<li><a href="/categories.html#recipe-ref">
+    		recipe
+    	</a></li>
+    
+  
+
+
+
+
+       
+       
+
+
+  
+    
+    	<li><a href="/tags.html#networking-ref">networking </a></li>
+    
+  
+
+
+
+     </ul>
+   </span>
+
+   
+   <span class="migrated">
+     migrated&nbsp;from&nbsp;<a href="http://crysol.org/node/653">node/653</a>
+   </span>
+   
+
+</div>
+
+
+
+
+  <div class="content">
+    
+      <blockquote>Hola buenas! todos nosotros somos adictos en mayor/menor medida a las redes P2P, de ellas descargamos películas, discos y algunos <em>delincuentes</em> programas y juegos. No es ningún secreto que la mayoría de los <em>internautas</em> españoles usan su conexión a internet para esto, las ISP's lo saben y como pasan de que su red se colapse realizan un filtro de protocolo a <em>emule</em> y <em>torrents</em> (las compañías evidentemente te lo negarán). No vale cambiar el puerto de escucha porque no se hace un filtro de puertos, se realiza filtro de protocolo. Se sospecha que Telefónica y Ono lo hacen; si es verdad que lo hacen deberían por lo menos avisar, así que nosotros vamos a intentar hacerles la pirula.</blockquote>
+
+<h1>Conexiones ofuscadas</h1>
+Nuestro problema está en que si un <em>router</em> de nuestro ISP <em>sabe</em> qué protocolo está transportando, podrá aplicar unas reglas de <em>QoS</em> (calidad de servicio) que probablemente a nosotros no nos haga ninguna gracia. La solución es más o menos sencilla: <em>ofuscar</em> el protocolo. Ofuscar una conexión es "desbaratar" el paquete saliente de forma que sea irreconocible, cuando llega a su destino, el receptor conoce la forma de recomponer el paquete. Hasta lo que sé, por ahora es la propia aplicación la que debe ofuscar el protocolo.
+
+<h1>Emule</h1>
+En GNU/Linux no disponemos de un buen cliente para <em>edonkey</em> que permita ofuscación de protocolo... debemos recurrir al maravilloso y archiconocido <em>eMule</em>. Tranquilos porque tiene licencia GPL :-P. Pero Int-0 se ha vuelto loco!! si eso es para hassefroch!!. Pues si... pero nosotros tenemos <em>wine</em> ;-)
+
+Pues bien, el <em>emule</em> funciona bastante bien con <em>wine</em> pero existe un problema: para alcanzar buenas velocidades es necesario abrir un <em>raw socket UDP</em> y esto sólo se puede hacer con wine si se es administrador :O. La forma en la que yo lanzo <em>emule</em> (no la versión con instalador, sino la que está lista para ejecutar) es la siguiente:
+
+<div class="console">
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">#</span> sudo wine emule.exe</code></pre></div>
+</div>
+
+<blockquote>Hay que advertir que esto es <em>PELIGROSO</em>, para paliar un poco los problemas, podríamos crear una jaula <em>chroot</em> o algo así, si alguno lo hace que mande un post o modifique la receta :-P.</blockquote>
+
+Una vez arrancado la mula, nos vamos a <em>Preferencias > Seguridad > Activar la Ofuscación de Protocolo</em> y listo!. El <em>único</em> problema de todo esto es que no hay mucha gente que use ofuscación, por ese motivo sólo descargaréis a máxima velocidad de clientes que usen también ofuscación.
+
+<h1>Torrent</h1>
+Bueno, este es el protocolo de p2p de GNU por excelencia :-). Aquí tenemos clientes en muchos sabores... pero que permitan la ofuscación de protocolo reduce bastante el abanico, concretamente (que yo conozca): Azureus y ktorrent. El Azureus está muy chulo pero tiene un inconveniente: carga mucho la máquina. El Ktorrent es más ligerito. Tanto Azureus como ktorrent permiten conexiones ofuscadas (pero en las opciones aparece como <em>permitir cifrado de protocolo</em>), así que ya sabeís, cualquiera de los dos os vale, además que ambos son paquete Debian.
+
+Y con esto termino... ya sabéis que la descarga de cierto software es absolutamente ilegal y la desapruebo completamente. Esta receta NO sirve para delinquir sino para <em>paliar</em> parcialmente la política restrictiva de los ISP's (no la discuto, pero me parece FATAL que no lo avisen oficialmente).
+
+    
+  </div>
+
+  <div class="footer">
+    
+  </div>
+
+</div>
+
+
+
+    
   
     
       <div class="node teaser ">
@@ -9089,135 +9201,6 @@ brue</p>
 
     
   
-    
-      <div class="node teaser ">
-  <h2><a href="/recipe/2007-04-12/escribir-en-chino-en-gnu-linux">Escribir en chino en GNU/Linux</a></h2>
-
-  <div class="header">
-  <span class="submitted">
-    2007-04-12
-    
-      
-  <a href="/users.html#goyo">
-   goyo
-  </a>
-
-
-    
-  </span>
-
-   <span class="source">
-     —
-     [
-      <a href="https://github.com/CRySoL/web.source/edit/master/_posts/migrated/2007-04-12-escribir-en-chino-en-gnu-linux.html">edit</a> |
-      <a href="https://github.com/CRySoL/web.source/raw/master/_posts/migrated/2007-04-12-escribir-en-chino-en-gnu-linux.html">raw</a>
-      ]
-   </span>
-
-   <span class="meta">
-     <ul>
-       
-       
-
-
-  
-    
-    	<li><a href="/categories.html#recipe-ref">
-    		recipe
-    	</a></li>
-    
-  
-
-
-
-
-       
-       
-
-
-  
-    
-  
-
-
-
-     </ul>
-   </span>
-
-   
-   <span class="migrated">
-     migrated&nbsp;from&nbsp;<a href="http://crysol.org/node/641">node/641</a>
-   </span>
-   
-
-</div>
-
-
-
-
-  <div class="content">
-    
-      <blockquote class="head"> 
-Con este mini-HowTo aprenderemos a escribir caracteres chinos (tradicional -fántǐzì- o simplificado -jiǎntǐzì-) en nuestra distribución GNU/Linux preferida utilizando la plataforma SCIM (Smart Common Input Method). Este tutorial puede ser extensible a otros idiomas como el Japonés o el Árabe, por ejemplo.
-</blockquote>
-
-
-<h2>Instalar SCIM y sus plugins de Chino</h2>
-SCIM es una plataforma que nos va a permitir escoger el Chino o cualquier otro idioma como método de entrada. Además, nos ayudará después en la escritura de los caracteres (No es tarea fácil sacar ideogramas de un teclado qwerty ^_^) . Para instalarlo tecleamos lo siguiente en un terminal:
-
-<div class="console">
-<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> sudo apt-get install scim</code></pre></div>
-</div>
-Por supuesto, también necesitamos el soporte de scim para Chino:
-
-<div class="console">
-<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> sudo apt-get install scim-chinese scim-tables-zh scim-pinyin</code></pre></div>
-</div>
-
-<h2>Configuración de SCIM</h2>
-Para configurar SCIM, tecleamos:
-
-<div class="console">
-<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> scim-setup</code></pre></div>
-</div>
-
-Se abre la ventana principal de SCIM y nos dirigimos a la sección IMEngine. Dentro de ella, pinchamos en la opción "Configuración Global", habilitamos Chino (simplificado) y/o Chino (tradicional). Los idiomas que tengamos habilitados luego los podremos seleccionar a la hora de ponernos a escribir los caracteres.
-Para finalizar, pinchamos en "Aceptar".
-
-<h2>Escribir los Caracteres</h2>
-Abrimos un editor de texto plano (por ejemplo, gedit) y hacemos click derecho en la hoja en blanco. En el menú contextual, vamos a "Método de Entrada" y seleccionamos "SCIM Input Method". 
-Si todo ha ido bien, abajo aparece una nueva barra con diferentes iconos.
-
-Puede ser que las primeras veces se resista. Esta barra sólo sale cuando el idioma Chino está correctamente habilitado en SCIM, así que si no te ha salido, probablemente el SCIM siga puesto para el español. Para comprobarlo, haz click izquierdo en el icono de SCIM de la barra de tareas al lado del reloj y comprueba que aparece el chino. Si no es así, haz click derecho y pulsa en "Actualizar Configuración".
-
-Nosotros escribiremos con nuestro teclado qwerty las palabras chinas en <a href="http://es.wikipedia.org/wiki/Pinyin">pinyin</a> (sin los tonos) y él nos mostrará las diferentes palabras chinas que existen con esas letras, probando con diferentes combinaciones de tonos. Es algo parecido al sistema de entrada T9 de los móviles. 
-
-Ahora que tenemos la barra, pinchamos en el icono a la derecha de la chincheta. Aquí elegiremos el algoritmo que nos va a ayudar a escribir. Debemos elegir la última opción que aparece en la parte de Chino (simplificado) (es la única que no tiene caracteres latinos en su descripción). También lo podemos escoger sin necesidad de la barra, en el menú desplegable que aparece al hacer click sobre el icono de SCIM al lado del reloj en la barra de tareas. 
-
-<h2>Un Ejemplo</h2>
-Como no podía ser de otra forma, para probarlo escribiremos "Hola Mundo".
-
-<i>Off-Topic: De todas las acepciones posibles de "mundo", me ha parecido mejor por la que se traduciría por "todo el mundo".
-En pinyin sería (digo yo, sólo llevo un mes aprendiendo :P) "quán qiú hào" (por si tenéis curiosidad, se pronunciaría parecido a  chuanchiou jao).</i>
-
-Para escribirlo, como ya hemos dicho, no necesitamos escribir los tonos (las tildes; en Chino hay 5 tipos), así que escribimos "quan" y nos aparecen varios ideogramas. El que se corresponde con el que buscamos es el primero, así que pulsamos el espacio y se guarda. Seguimos escribiendo "qiu" y el caracter que buscamos es el segundo, por lo que pulsamos el 2 en el teclado. El caracter correspondiente de "hao" también es el primero, así que simplemente escribimos hao y damos un espacio. El resultado es el siguiente: 
-<pre>全球 好</pre>
-
-再见 (zài jiàn, Adiós!) 
-
-    
-  </div>
-
-  <div class="footer">
-    
-  </div>
-
-</div>
-
-
-
-    
-  
 
   <div class="pagination pagination-centered">
   <ul>
@@ -9258,7 +9241,10 @@ Para escribirlo, como ya hemos dicho, no necesitamos escribir los tonos (las til
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
 	  See <a href="https://github.com/CRySoL/web.source" target="_blank">site sources</a>.
 	  <br/>
-	  Generated at 2014-11-11 12:22:32 +0100
+	  Generated at 2014-11-20 13:37:29 +0100
+	</p>
+	<p>
+	  Visit <a href="https://groups.google.com/forum/?hl=es#!forum/crysol">our forum</a>.
 	</p>
       </footer>
 
